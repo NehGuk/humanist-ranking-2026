@@ -62,8 +62,8 @@ Candidate registration data (party, ballot number, date of birth) is sourced fro
 
 ## About us
 
-- (Humanistas Brasil)[https://humanistas.ong.br]
-- (Humanists International)[https://humanists.international]
+- [Humanistas Brasil](https://humanistas.ong.br)
+- [Humanists International](https://humanists.international)
 
 ## Disclaimer
 
