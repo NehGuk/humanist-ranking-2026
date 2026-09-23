@@ -35,30 +35,9 @@ The goal is to give voters a clear, side-by-side view of each candidate's positi
 
 No separate backend server — the frontend talks to Supabase directly, with Row Level Security policies controlling access (public read, restricted write).
 
-## Getting started
-
-```bash
-git clone <repo-url>
-cd humanist-ranking-2026
-pnpm install
-```
-
-Create a `.env` file in the project root:
-
-```
-VITE_SUPABASE_URL=your-supabase-project-url
-VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
-```
-
-Then run the dev server:
-
-```bash
-pnpm run dev
-```
-
 ## Data sources
 
-Candidate registration data (party, ballot number, date of birth) is sourced from the Tribunal Superior Eleitoral (TSE) via its public **DivulgaCandContas** registry. Stance classifications are curated by Humanistas Brasil based on public statements, voting records, and official campaign platforms.
+Candidate data is sourced from the Tribunal Superior Eleitoral (TSE) and the stance classifications are curated by Humanistas Brasil based on public statements, voting records, and official campaign platforms.
 
 ## About us
 
