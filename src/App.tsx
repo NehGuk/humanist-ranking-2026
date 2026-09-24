@@ -1,12 +1,12 @@
-import Nav from "./components/Nav/Nav"
 import Intro from "./components/Intro/Intro"
 import Ranking from "./components/Ranking/Ranking"
 import Methodology from "./components/Methodology/Methodology"
 import Footer from "./components/Footer/Footer"
+import Header from "./components/Header/Header"
 function App() {
   return (
     <>
-      <Nav />
+      <Header />
       <Intro />
       <Ranking />
       <Methodology />
