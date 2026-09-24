@@ -36,7 +36,7 @@ export default function Ranking() {
       <table>
         <thead>
           <tr>
-            <th>Foto</th>
+            {<th></th>}
             <th>Nome</th>
             <th>Partido</th>
             <th>Pontos</th>
@@ -61,7 +61,7 @@ export default function Ranking() {
           ))}
         </tbody>
       </table>
-      <a>Conheça os critérios</a>
+      <a>Clique aqui e veja como cada um pensa</a>
     </section>
   )
 }
