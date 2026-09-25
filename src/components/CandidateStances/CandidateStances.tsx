@@ -14,14 +14,8 @@ interface CandidateStancesProps {
 export default function CandidateStances({ stances }: CandidateStancesProps) {
   return (
     <table>
-      <thead>
-        <tr>
-          <th>Critério</th>
-          <th>Posição</th>
-        </tr>
-      </thead>
       <tbody>
-        {stances.map((s) => (
+        {[...stances].reverse().map((s) => (
           <tr key={s.humanist_criteria.slug}>
             <td>{s.humanist_criteria.label}</td>
             <td>
