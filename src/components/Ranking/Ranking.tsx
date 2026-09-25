@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import { getPoliticians } from "../../utils/getPoliticians"
 import type { Politician } from "../../types"
+import CandidateDetails from "../CandidateDetails/CandidateDetails"
 
 export default function Ranking() {
   const [politicians, setPoliticians] = useState<Politician[]>([])
@@ -45,7 +46,11 @@ export default function Ranking() {
           ))}
         </tbody>
       </table>
-      <a>Clique aqui e veja como cada um pensa</a>
+      <a>Veja como cada um pensa</a>
+
+      {politicians.map((p) => (
+        <CandidateDetails key={p.id} politician={p} />
+      ))}
     </section>
   )
 }

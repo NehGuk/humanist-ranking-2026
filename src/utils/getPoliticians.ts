@@ -21,6 +21,6 @@ export async function getPoliticians() {
     console.error(error)
     return []
   }
-
+  console.log(politicians)
   return politicians as unknown as Politician[]
 }
