@@ -1,34 +1,18 @@
+// src/components/Ranking/Ranking.tsx
 import { useState, useEffect } from "react"
-import { supabase } from "../../utils/supabase"
+import { getPoliticians } from "../../utils/getPoliticians"
 import type { Politician } from "../../types"
 
 export default function Ranking() {
   const [politicians, setPoliticians] = useState<Politician[]>([])
 
   useEffect(() => {
-    async function getPoliticians() {
-      const { data: politicians, error } = await supabase
-        .from("politicians")
-        .select(
-          `
-        id, name, candidate_number, points, photo_url,
-        parties ( name, acronym ),
-        politician_stances (
-          stance,
-          humanist_criteria ( slug, label, sort_order )
-        )
-      `
-        )
-        .order("points", { ascending: false })
-
-      console.log({ politicians, error })
-
-      if (politicians) {
-        setPoliticians(politicians as unknown as Politician[])
-      }
+    async function loadPoliticians() {
+      const data = await getPoliticians()
+      setPoliticians(data)
     }
 
-    getPoliticians()
+    loadPoliticians()
   }, [])
 
   return (
@@ -36,7 +20,7 @@ export default function Ranking() {
       <table>
         <thead>
           <tr>
-            {<th></th>}
+            <th></th>
             <th>Nome</th>
             <th>Partido</th>
             <th>Pontos</th>
