@@ -19,6 +19,7 @@ export default function Footer() {
           </a>
         </li>
       </ul>
+      <p>Este projeto é uma parceria entre a Humanistas Brasil e o Coletivo Humanista de São Paulo.</p>
     </>
   )
 }
