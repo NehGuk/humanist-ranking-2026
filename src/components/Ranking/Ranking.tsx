@@ -48,6 +48,53 @@ export default function Ranking() {
       </table>
       <a>Veja como cada um pensa</a>
 
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: 14,
+                    height: 14,
+                    borderRadius: "50%",
+                    backgroundColor: "green",
+                  }}
+                />
+              </td>
+              <td>
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: 14,
+                    height: 14,
+                    borderRadius: "50%",
+                    backgroundColor: "grey",
+                  }}
+                />
+              </td>
+              <td>
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: 14,
+                    height: 14,
+                    borderRadius: "50%",
+                    backgroundColor: "red",
+                  }}
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>A favor</td>
+              <td>Sem posição</td>
+              <td>Contra</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       {politicians.map((p) => (
         <CandidateDetails key={p.id} politician={p} />
       ))}
