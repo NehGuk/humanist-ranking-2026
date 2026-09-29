@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { getPoliticians } from "../../utils/getPoliticians"
 import type { Politician } from "../../types"
 import CandidateDetails from "../CandidateDetails/CandidateDetails"
+import { CircleCheck, CircleAlert, CircleX } from "lucide-react"
 
 export default function Ranking() {
   const [politicians, setPoliticians] = useState<Politician[]>([])
@@ -53,37 +54,13 @@ export default function Ranking() {
           <tbody>
             <tr>
               <td>
-                <span
-                  style={{
-                    display: "inline-block",
-                    width: 14,
-                    height: 14,
-                    borderRadius: "50%",
-                    backgroundColor: "green",
-                  }}
-                />
+                <CircleCheck />
               </td>
               <td>
-                <span
-                  style={{
-                    display: "inline-block",
-                    width: 14,
-                    height: 14,
-                    borderRadius: "50%",
-                    backgroundColor: "grey",
-                  }}
-                />
+                <CircleAlert />
               </td>
               <td>
-                <span
-                  style={{
-                    display: "inline-block",
-                    width: 14,
-                    height: 14,
-                    borderRadius: "50%",
-                    backgroundColor: "red",
-                  }}
-                />
+                <CircleX />
               </td>
             </tr>
             <tr>

@@ -1,10 +1,16 @@
-// src/components/CandidateStances/CandidateStances.tsx
+import { CircleCheck, CircleAlert, CircleX } from "lucide-react"
 import type { Politician } from "../../types"
 
-const stanceColors: Record<string, string> = {
-  A_FAVOR: "green",
-  CONTRA: "red",
-  SEM_POSICIONAMENTO: "grey",
+const stanceIcons: Record<string, React.ReactNode> = {
+  A_FAVOR: <CircleCheck className="h-5 w-5 text-favor text-green-600" />,
+  CONTRA: <CircleX className="h-5 w-5 text-against text-red-500" />,
+  SEM_POSICIONAMENTO: <CircleAlert className="h-5 w-5 text-neutral text-gray-600" />,
+}
+
+const stanceLabels: Record<string, string> = {
+  A_FAVOR: "A favor",
+  CONTRA: "Contra",
+  SEM_POSICIONAMENTO: "Sem posicionamento",
 }
 
 interface CandidateStancesProps {
@@ -22,18 +28,9 @@ export default function CandidateStances({ stances }: CandidateStancesProps) {
         <tbody>
           {firstNine.map((s) => (
             <tr key={s.humanist_criteria.slug}>
-              <td>{s.humanist_criteria.label.replace("Proteção de minorias historicamente marginalizadas:", "").trim()}</td>
+              <td>{s.humanist_criteria.label}</td>
               <td>
-                <span
-                  style={{
-                    display: "inline-block",
-                    width: 14,
-                    height: 14,
-                    borderRadius: "50%",
-                    backgroundColor: stanceColors[s.stance],
-                  }}
-                  title={s.stance}
-                />
+                <span title={stanceLabels[s.stance]}>{stanceIcons[s.stance]}</span>
               </td>
             </tr>
           ))}
@@ -48,16 +45,7 @@ export default function CandidateStances({ stances }: CandidateStancesProps) {
             <tr key={s.humanist_criteria.slug}>
               <td>{s.humanist_criteria.label.replace("Proteção de minorias historicamente marginalizadas:", "").trim()}</td>
               <td>
-                <span
-                  style={{
-                    display: "inline-block",
-                    width: 14,
-                    height: 14,
-                    borderRadius: "50%",
-                    backgroundColor: stanceColors[s.stance],
-                  }}
-                  title={s.stance}
-                />
+                <span title={stanceLabels[s.stance]}>{stanceIcons[s.stance]}</span>
               </td>
             </tr>
           ))}
