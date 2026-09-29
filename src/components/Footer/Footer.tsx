@@ -20,6 +20,7 @@ export default function Footer() {
         </li>
       </ul>
       <p>Este projeto é uma parceria entre a Humanistas Brasil e o Coletivo Humanista de São Paulo.</p>
+      <a href="https://storyset.com/people">People illustrations by Storyset</a>
     </>
   )
 }

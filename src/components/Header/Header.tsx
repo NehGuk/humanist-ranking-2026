@@ -1,9 +1,11 @@
 import logoSimplesTransparente from "../../assets/logos/logo-simples-transparente.png"
 export default function Header() {
   return (
-    <header>
-      <img src={logoSimplesTransparente} alt="Vite logo" />
-      <h1>Ranking Humanista</h1>
+    <header className="sticky top-0 z-50 bg-white flex items-center justify-between gap-3 px-2 py-2">
+      <a href="#">
+        <img src={logoSimplesTransparente} alt="Logo Humanistas Brasil" className="h-10 w-10 object-contain" />
+      </a>
+      <h1 className="text-xl font-bold text-emerald-800">Ranking Humanista</h1>
     </header>
   )
 }

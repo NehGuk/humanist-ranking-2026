@@ -2,14 +2,14 @@
 
 @theme {
   --color-brand: #15cd8d;
-  --color-favor: #16a34a;
+  --color-infavour: #16a34a;
   --color-against: #dc2626;
   --color-neutral: #9ca3af;
 }
 
 @layer base {
   body {
-    @apply bg-[#FAF9F6] text-gray-700 antialiased;
+    @apply bg-[#f5f5f5] text-gray-700 antialiased;
   }
 
   h1,
@@ -22,9 +22,9 @@
   }
 
   h2 {
-    @apply font-bold text-green-700;
+    @apply font-bold text-2xl pt-9 text-green-700 text-center;
   }
   a {
-    @apply text-brand underline decoration-1 underline-offset-2 hover:text-green-600;
+    @apply text-brand underline decoration-1 underline-offset-2 hover:text-green-600 text-center;
   }
 }
