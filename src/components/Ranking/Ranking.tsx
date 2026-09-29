@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { getPoliticians } from "../../utils/getPoliticians"
 import type { Politician } from "../../types"
 import CandidateDetails from "../CandidateDetails/CandidateDetails"
-import { CircleCheck, CircleAlert, CircleX } from "lucide-react"
+import { CircleCheck, CircleQuestionMark, CircleX } from "lucide-react"
 
 export default function Ranking() {
   const [politicians, setPoliticians] = useState<Politician[]>([])
@@ -57,7 +57,7 @@ export default function Ranking() {
                 <CircleCheck />
               </td>
               <td>
-                <CircleAlert />
+                <CircleQuestionMark />
               </td>
               <td>
                 <CircleX />

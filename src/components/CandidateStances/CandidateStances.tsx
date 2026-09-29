@@ -1,10 +1,10 @@
-import { CircleCheck, CircleAlert, CircleX } from "lucide-react"
+import { CircleCheck, CircleQuestionMark, CircleX } from "lucide-react"
 import type { Politician } from "../../types"
 
 const stanceIcons: Record<string, React.ReactNode> = {
   A_FAVOR: <CircleCheck className="h-5 w-5 text-favor text-green-600" />,
   CONTRA: <CircleX className="h-5 w-5 text-against text-red-500" />,
-  SEM_POSICIONAMENTO: <CircleAlert className="h-5 w-5 text-neutral text-gray-600" />,
+  SEM_POSICIONAMENTO: <CircleQuestionMark className="h-5 w-5 text-neutral text-gray-600" />,
 }
 
 const stanceLabels: Record<string, string> = {
