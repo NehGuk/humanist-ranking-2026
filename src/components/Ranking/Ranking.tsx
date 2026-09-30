@@ -18,38 +18,46 @@ export default function Ranking() {
   }, [])
 
   return (
-    <section>
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Nome</th>
-            <th>Partido</th>
-            <th>Pontos</th>
-          </tr>
-        </thead>
-        <tbody>
-          {politicians.map((p) => (
-            <tr key={p.id}>
-              <td>
-                <img
-                  src={p.photo_url ?? undefined}
-                  alt={p.name}
-                  width={32}
-                  height={32}
-                  style={{ objectFit: "cover", borderRadius: "50%" }}
-                />
-              </td>
-              <td>{p.name}</td>
-              <td>{p.parties?.acronym}</td>
-              <td>{p.points}</td>
+    <>
+      <section className="min-h-screen bg-white">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th>Pontos</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      <a>Veja como cada um pensa</a>
-
-      <div>
+          </thead>
+          <tbody>
+            {politicians.map((p) => (
+              <tr key={p.id}>
+                <td>
+                  <img
+                    src={p.photo_url ?? undefined}
+                    alt={p.name}
+                    width={32}
+                    height={32}
+                    style={{ objectFit: "cover", borderRadius: "50%" }}
+                  />
+                </td>
+                <td>{p.name}</td>
+                <td>{p.parties?.acronym}</td>
+                <td>{p.points}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <a>Veja os critérios</a>
+      </section>
+      <section className="flex min-h-screen flex-col">
+        <h3>Critérios</h3>
+        <p>
+          Selecionamos 12 pautas humanistas contemporâneas. Após verificar manifestações públicas dos candidatos e candidatas, em suas redes
+          sociais e principais veículos de mídia do país, estabelecemos uma escala de pontuação. A nota final considera posições públicas a
+          favor do tema (+1), contra (-1) ou se não há posicionamento conhecido (0) a respeito do assunto.
+        </p>
+        <h4>Legenda</h4>
         <table>
           <tbody>
             <tr>
@@ -70,11 +78,12 @@ export default function Ranking() {
             </tr>
           </tbody>
         </table>
-      </div>
-
-      {politicians.map((p) => (
-        <CandidateDetails key={p.id} politician={p} />
-      ))}
-    </section>
+      </section>
+      <section>
+        {politicians.map((p) => (
+          <CandidateDetails key={p.id} politician={p} />
+        ))}
+      </section>
+    </>
   )
 }

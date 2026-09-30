@@ -1,17 +1,11 @@
 export default function Methodology() {
   return (
-    <>
-      <h2>Metodologia</h2>
-      <p>Os 12 critérios deste ranking foram analisados da seguinte maneira:</p>
-      <ul>
-        <li>A defesa explícita do critério dá ao candidato 1 ponto</li>
-        <li>A ausência da pauta nas manifestações públicas do candidato resulta em pontuação nula</li>
-        <li>Discordância explícita com o critério dá ao candidato -1 ponto.</li>
-      </ul>
+    <section className="flex min-h-screen flex-col">
+      <h3>Período de análise</h3>
       <p>
-        Assim, a pontuação varia de 0 a 12. A coleta de dados foi realizada pelas equipes da Humanistas Brasil e do Coletivo Humanista de
-        São Paulo entre os dias XXXXX e XXXXX de 2026, nos canais A, B, C, D e E.
+        As informações que embasaram a construção desse <em>ranking</em> foram compiladas pelas equipes da Humanistas Brasil e do Coletivo
+        Humanista de São Paulo, entre 01/04/2026 e 01/09/2026.
       </p>
-    </>
+    </section>
   )
 }
