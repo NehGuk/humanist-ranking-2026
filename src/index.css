@@ -30,7 +30,7 @@
   }
 
   h3 {
-    @apply font-bold text-xl uppercase;
+    @apply font-bold text-xl pb-3 uppercase;
   }
   a {
     @apply no-underline;

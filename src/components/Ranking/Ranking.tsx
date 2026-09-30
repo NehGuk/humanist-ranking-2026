@@ -3,8 +3,8 @@ import { useState, useEffect } from "react"
 import { getPoliticians } from "../../utils/getPoliticians"
 import type { Politician } from "../../types"
 import CandidateDetails from "../CandidateDetails/CandidateDetails"
-import { CircleCheck, CircleQuestionMark, CircleX } from "lucide-react"
 import colorPoints from "../../utils/colorPoints"
+import Criteria from "../Criteria/Criteria"
 
 export default function Ranking() {
   const [politicians, setPoliticians] = useState<Politician[]>([])
@@ -57,37 +57,8 @@ export default function Ranking() {
           </div>
         </div>
       </section>
-      <section id="criteria" className="flex min-h-screen flex-col justify-center scroll-mt-14">
-        <h3>Critérios</h3>
-        <p>
-          Selecionamos 12 pautas humanistas contemporâneas. Após verificar manifestações públicas dos candidatos e candidatas, em suas redes
-          sociais e principais veículos de mídia do país, estabelecemos uma escala de pontuação. A nota final considera posições públicas{" "}
-          <strong>a favor</strong> do tema (+1), <strong>contra</strong> (-1) ou <strong>sem posicionamento conhecido</strong> (0) a
-          respeito do assunto.
-        </p>
-        <h4>Legenda</h4>
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <CircleCheck />
-              </td>
-              <td>
-                <CircleQuestionMark />
-              </td>
-              <td>
-                <CircleX />
-              </td>
-            </tr>
-            <tr>
-              <td>A favor</td>
-              <td>Sem posição</td>
-              <td>Contra</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section>
+      <Criteria />
+      <section id="candidate-details" className="flex min-h-sceen  flex-col p-3">
         {politicians.map((p) => (
           <CandidateDetails key={p.id} politician={p} />
         ))}
