@@ -20,7 +20,7 @@ export default function Ranking() {
 
   return (
     <>
-      <section className="flex min-h-screen flex-col justify-center bg-white">
+      <section id="ranking" className="flex min-h-screen flex-col justify-center bg-white scroll-mt-8">
         <div className="overflow-hidden p-3">
           <table className="w-full max-w-3xl mx-auto">
             <thead>
@@ -51,13 +51,13 @@ export default function Ranking() {
             </tbody>
           </table>
           <div className="text-center pt-9">
-            <a href="#" className="text-white text-sm font-bold bg-brand px-4 py-3 rounded-sm uppercase">
+            <a href="#criteria" className="text-white text-sm font-bold bg-brand px-4 py-3 rounded-sm uppercase">
               Como calculamos?
             </a>
           </div>
         </div>
       </section>
-      <section className="flex min-h-screen flex-col">
+      <section id="criteria" className="flex min-h-screen flex-col justify-center scroll-mt-14">
         <h3>Critérios</h3>
         <p>
           Selecionamos 12 pautas humanistas contemporâneas. Após verificar manifestações públicas dos candidatos e candidatas, em suas redes
