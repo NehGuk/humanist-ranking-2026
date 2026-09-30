@@ -58,7 +58,7 @@ export default function Ranking() {
         </div>
       </section>
       <Criteria />
-      <section id="candidate-details" className="flex min-h-sceen  flex-col p-3">
+      <section id="candidate-details" className="flex-col p-3 scroll-mt-14">
         {politicians.map((p) => (
           <CandidateDetails key={p.id} politician={p} />
         ))}

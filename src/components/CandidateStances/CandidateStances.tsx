@@ -37,7 +37,7 @@ export default function CandidateStances({ stances }: CandidateStancesProps) {
         </tbody>
       </table>
 
-      <h4>Proteção de minorias historicamente marginalizadas</h4>
+      <h5>Proteção de minorias historicamente marginalizadas</h5>
 
       <table>
         <tbody>

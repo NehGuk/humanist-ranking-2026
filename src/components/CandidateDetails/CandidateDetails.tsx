@@ -1,5 +1,6 @@
 import CandidateStances from "../CandidateStances/CandidateStances"
 import type { Politician } from "../../types"
+import colorPoints from "../../utils/colorPoints"
 
 interface CandidateDetailsProps {
   politician: Politician
@@ -7,13 +8,27 @@ interface CandidateDetailsProps {
 
 export default function CandidateDetails({ politician }: CandidateDetailsProps) {
   return (
-    <section id={`candidate-${politician.id}`}>
-      <img src={politician.photo_url ?? undefined} alt={politician.name} width={200} />
-      <h4>{politician.name}</h4>
-      <p>{politician.parties?.name}</p>
-      <p>{politician.parties?.acronym}</p>
-      <p>Pontos: {politician.points}</p>
-      <CandidateStances stances={politician.politician_stances} />
+    <section className="flex min-h-screen flex-col">
+      <div id={`candidate-${politician.id}`} className=" p-3 bg-white">
+        <div className="flex gap-3 mb-8">
+          <div className="">
+            <img
+              src={politician.photo_url ?? undefined}
+              alt={politician.name}
+              className="h-22 w-22 rounded-full border-1 shrink-0 border-gray-200 object-cover grayscale"
+            />
+          </div>
+          <div className="my-auto">
+            <h4>{politician.name}</h4>
+            <p className="uppercase text-sm text-gray-500 font-medium">{politician.parties?.name}</p>
+            <p className="uppercase text-sm text-gray-500 font-medium">Número: {politician.candidate_number}</p>
+          </div>
+        </div>
+        <CandidateStances stances={politician.politician_stances} />
+        <p>
+          Nota final: <span className={colorPoints(politician.points)}>{politician.points}</span>
+        </p>
+      </div>
     </section>
   )
 }

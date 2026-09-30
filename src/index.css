@@ -32,6 +32,10 @@
   h3 {
     @apply font-bold text-xl pb-3 uppercase;
   }
+
+  h4 {
+    @apply text-xl;
+  }
   a {
     @apply no-underline;
   }
