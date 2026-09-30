@@ -25,9 +25,17 @@ export default function CandidateDetails({ politician }: CandidateDetailsProps) 
           </div>
         </div>
         <CandidateStances stances={politician.politician_stances} />
-        <p>
-          Nota final: <span className={colorPoints(politician.points)}>{politician.points}</span>
-        </p>
+
+        <table className="w-full max-w-xl text-sm table-fixed border-1 border-gray-400 mt-2">
+          <tbody className="font-bold uppercase">
+            <tr className="">
+              <td className="pl-2 text-gray-500">Nota final</td>
+              <td className="pr-3 text-right text-xl">
+                <span className={colorPoints(politician.points)}>{politician.points}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   )
