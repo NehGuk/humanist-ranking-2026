@@ -29,6 +29,6 @@
     @apply font-bold text-xl;
   }
   a {
-    @apply text-brand underline decoration-1 underline-offset-2 hover:text-green-600 text-center;
+    @apply no-underline;
   }
 }

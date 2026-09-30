@@ -4,6 +4,7 @@ import { getPoliticians } from "../../utils/getPoliticians"
 import type { Politician } from "../../types"
 import CandidateDetails from "../CandidateDetails/CandidateDetails"
 import { CircleCheck, CircleQuestionMark, CircleX } from "lucide-react"
+import colorPoints from "../../utils/colorPoints"
 
 export default function Ranking() {
   const [politicians, setPoliticians] = useState<Politician[]>([])
@@ -19,43 +20,50 @@ export default function Ranking() {
 
   return (
     <>
-      <section className="min-h-screen bg-white">
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th>Pontos</th>
-            </tr>
-          </thead>
-          <tbody>
-            {politicians.map((p) => (
-              <tr key={p.id}>
-                <td>
-                  <img
-                    src={p.photo_url ?? undefined}
-                    alt={p.name}
-                    width={32}
-                    height={32}
-                    style={{ objectFit: "cover", borderRadius: "50%" }}
-                  />
-                </td>
-                <td>{p.name}</td>
-                <td>{p.parties?.acronym}</td>
-                <td>{p.points}</td>
+      <section className="flex min-h-screen flex-col justify-center bg-white">
+        <div className="overflow-hidden p-3">
+          <table className="w-full max-w-3xl mx-auto">
+            <thead>
+              <tr>
+                <th className=""></th>
+                <th className=""></th>
+                <th></th>
+                <th className="text-center text-xs font-medium uppercase tracking-wider text-gray-500">Pontos</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-        <a>Veja os critérios</a>
+            </thead>
+            <tbody className="text-sm">
+              {politicians.map((p) => (
+                <tr key={p.id} className="border-b border-gray-100 transition hover:bg-gray-50 ">
+                  <td className="p-1">
+                    <img
+                      src={p.photo_url ?? undefined}
+                      alt={p.name}
+                      className="h-8 w-8 shrink-0 border-1 border-gray-100 rounded-full object-cover grayscale"
+                    />
+                  </td>
+                  <td className="text-left pl-3">{p.name}</td>
+                  <td className="text-gray-400 text-right">{p.parties?.acronym}</td>
+                  <td className="text-center">
+                    <strong className={colorPoints(p.points)}>{p.points}</strong>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div className="text-center pt-9">
+            <a href="#" className="text-white text-sm font-bold bg-brand px-4 py-3 rounded-sm uppercase">
+              Como calculamos?
+            </a>
+          </div>
+        </div>
       </section>
       <section className="flex min-h-screen flex-col">
         <h3>Critérios</h3>
         <p>
           Selecionamos 12 pautas humanistas contemporâneas. Após verificar manifestações públicas dos candidatos e candidatas, em suas redes
-          sociais e principais veículos de mídia do país, estabelecemos uma escala de pontuação. A nota final considera posições públicas a
-          favor do tema (+1), contra (-1) ou se não há posicionamento conhecido (0) a respeito do assunto.
+          sociais e principais veículos de mídia do país, estabelecemos uma escala de pontuação. A nota final considera posições públicas{" "}
+          <strong>a favor</strong> do tema (+1), <strong>contra</strong> (-1) ou <strong>sem posicionamento conhecido</strong> (0) a
+          respeito do assunto.
         </p>
         <h4>Legenda</h4>
         <table>
