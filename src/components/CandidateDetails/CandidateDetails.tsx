@@ -8,9 +8,9 @@ interface CandidateDetailsProps {
 
 export default function CandidateDetails({ politician }: CandidateDetailsProps) {
   return (
-    <section className="flex min-h-screen flex-col">
+    <section className="flex min-h-screen flex-col max-w-md">
       <div id={`candidate-${politician.id}`} className=" p-3 bg-white">
-        <div className="flex gap-3 mb-8">
+        <div className="flex gap-3 mb-6">
           <div className="">
             <img
               src={politician.photo_url ?? undefined}
