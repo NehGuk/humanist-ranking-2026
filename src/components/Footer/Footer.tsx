@@ -13,7 +13,15 @@ export default function Footer() {
         <a href="https://humanists.international/" target="_blank" className="text-green-700 font-bold">
           Humanists International
         </a>{" "}
-        e seguimos os princípios da <a className="text-green-700 font-bold">Declaração de Amsterdã</a>.
+        e seguimos os princípios da{" "}
+        <a
+          href="https://humanists.international/pt/o-que-%C3%A9-humanismo/a-declara%C3%A7%C3%A3o-de-Amsterd%C3%A3/"
+          target="_blank"
+          className="text-green-700 font-bold"
+        >
+          Declaração de Amsterdã
+        </a>
+        .
       </p>
       <hr className="m-5 text-yellow-600"></hr>
 
@@ -22,7 +30,9 @@ export default function Footer() {
           O <em>Ranking Humanista</em> é uma parceria entre a Humanistas Brasil e o Coletivo Humanista de São Paulo.
         </p>
         <div className="pt-5">
-          <a href="https://storyset.com/people">Crédito das ilustrações: Storyset</a>
+          <a href="https://storyset.com/people" target="_blank">
+            Crédito das ilustrações: Storyset
+          </a>
         </div>
       </div>
     </section>
