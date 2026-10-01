@@ -38,7 +38,7 @@ export default function Ranking() {
                     <img
                       src={p.photo_url ?? undefined}
                       alt={p.name}
-                      className="h-8 w-8 shrink-0 border-1 border-gray-100 rounded-full object-cover grayscale"
+                      className="h-8 w-8 md:h-12 md:w-12 shrink-0 border-1 border-gray-100 rounded-full object-cover grayscale"
                     />
                   </td>
                   <td className="text-left pl-3">{p.name}</td>
