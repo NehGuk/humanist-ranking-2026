@@ -18,8 +18,8 @@ export default function CandidateDetails({ politician }: CandidateDetailsProps) 
         />
         <div className="my-auto">
           <h4 className="font-bold text-gray-900">{politician.name}</h4>
-          <p className="text-sm font-medium uppercase text-gray-500">{politician.parties?.name}</p>
-          <p className="text-sm font-medium uppercase text-gray-500">Número: {politician.candidate_number}</p>
+          <p className="text-sm text-gray-500">{politician.parties?.name}</p>
+          <p className="text-sm text-gray-500">Número: {politician.candidate_number}</p>
         </div>
       </div>
 

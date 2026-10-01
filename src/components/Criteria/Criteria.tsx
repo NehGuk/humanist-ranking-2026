@@ -13,29 +13,36 @@ export default function Criteria() {
         </p>
 
         <div className="mt-9">
-          <h4 className="mb-4 text-lg font-bold text-gray-50 md:text-xl">Legenda</h4>
-          <table className="w-full table-fixed rounded-md bg-green-900 text-center">
-            <tbody className="text-sm font-medium uppercase md:text-base">
+          <h4 className="mb-4 text-lg text-gray-50 md:text-xl">Legenda</h4>
+          <table className="w-full table-fixed rounded-md bg-green-900 text-center text-gray-200 text-sm font-slab uppercase md:text-base">
+            <thead>
               <tr>
-                <td className="p-3">
+                <th scope="col" className="p-5">
                   <CircleCheck className="mx-auto text-brand" />
-                </td>
-                <td>
+                </th>
+                <th scope="col" className="p-5">
                   <CircleQuestionMark className="mx-auto text-gray-400" />
-                </td>
-                <td>
+                </th>
+                <th scope="col" className="p-5">
                   <CircleX className="mx-auto text-red-400" />
-                </td>
+                </th>
               </tr>
-              <tr className="text-gray-300 text-sm font-bold">
-                <td className="p-3">A favor</td>
-                <td>Sem posição</td>
-                <td>Contra</td>
+            </thead>
+            <tbody>
+              <tr>
+                <th>A favor</th>
+                <th>Sem posição</th>
+                <th>Contra</th>
+              </tr>
+              <tr>
+                <th className="p-5 text-xl">+1</th>
+                <th className="p-5 text-xl">0</th>
+                <th className="p-5 text-xl">-1</th>
               </tr>
             </tbody>
           </table>
         </div>
-        <a href="#candidate-details" className="mx-auto block w-fit pt-14 md:pt-20">
+        <a href="#candidate-details" className="mx-auto block w-fit pt-6 md:pt-20">
           <ChevronsDown className="mb-8 mt-4 h-12 w-20 text-white animate-bounce" />
         </a>
       </div>
