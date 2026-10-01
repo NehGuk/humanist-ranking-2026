@@ -1,7 +1,7 @@
 import logo from "../../assets/logos/logo.png"
 export default function Footer() {
   return (
-    <section className="p-10 text-sm md:max-w-1/3 mx-auto">
+    <section className="p-10  md:max-w-1/3 mx-auto">
       <img src={logo} className="w-40 h-auto mx-auto" />
       <p className="mt-4">
         A{" "}
