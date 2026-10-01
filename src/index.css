@@ -37,7 +37,7 @@
   }
 
   h4 {
-    @apply text-xl;
+    @apply text-xl font-slab;
   }
   a {
     @apply no-underline;
