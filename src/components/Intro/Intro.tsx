@@ -4,10 +4,10 @@ export default function Intro() {
   return (
     <section id="intro" className="flex min-h-screen flex-col items-center justify-center px-6 text-center scroll-mt-14">
       <img src={questions} alt="Illustration of citizen in doubt" className="w-6/7 md:w-max h-auto" />
-      <p className="py-3 font-medium text-gray-500">Eleições 2026 | Brasil</p>
+      <p className="py-1 font-medium text-gray-500 font-slab">Eleições 2026 | Brasil</p>
 
-      <h2 className="py-2 text-4xl">Presidenciáveis</h2>
-      <p className="text-center text-2xl max-w-120">
+      <h2 className="pb-5 text-4xl lg:text-5xl font-handwriting">Presidenciáveis</h2>
+      <p className="text-center text-2xl max-w-120 font-slab">
         Como os candidatos pontuam em quesitos relacionados a pautas <strong className="text-yellow-600">humanistas</strong>?
       </p>
       <a href="#ranking">

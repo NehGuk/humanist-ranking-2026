@@ -51,7 +51,7 @@ export default function Ranking() {
             </tbody>
           </table>
           <div className="text-center pt-9">
-            <a href="#criteria" className="text-white text-sm font-bold bg-brand px-4 py-3 rounded-sm uppercase">
+            <a href="#criteria" className="text-white text-sm font-bold bg-brand  px-4 py-3 rounded-sm uppercase font-slab">
               Como calculamos?
             </a>
           </div>

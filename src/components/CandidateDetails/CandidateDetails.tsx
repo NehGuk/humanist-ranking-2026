@@ -29,7 +29,7 @@ export default function CandidateDetails({ politician }: CandidateDetailsProps) 
         <tbody className="font-bold uppercase">
           <tr>
             <td className="pl-2 text-grey-600">Nota final</td>
-            <td className="pr-4 text-right text-xl">
+            <td className="pr-4.5 text-right text-lg">
               <span className={colorPoints(politician.points)}>{politician.points}</span>
             </td>
           </tr>

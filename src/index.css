@@ -5,6 +5,9 @@
   --color-infavor: #16a34a;
   --color-against: #c03c3c;
   --color-neutral: #9ca3af;
+  --font-handwriting: "Playwrite AT Variable", cursive;
+  --font-slab: "Zilla Slab", serif;
+  --font-sans: "Atkinson Hyperlegible", sans-serif;
 }
 
 @layer base {
@@ -30,7 +33,7 @@
   }
 
   h3 {
-    @apply font-bold text-xl pb-3 uppercase;
+    @apply font-bold text-xl pb-3 font-slab;
   }
 
   h4 {
