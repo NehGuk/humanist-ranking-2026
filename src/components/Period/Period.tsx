@@ -6,7 +6,7 @@ export default function Period() {
         <h3 className="mt-12 text-gray-50">Período de análise</h3>
         <p className="max-w-prose md:text-lg">
           As informações que embasaram a construção desse <em>ranking</em> foram compiladas pelas equipes da Humanistas Brasil e do Coletivo
-          Humanista de São Paulo, entre as datas <strong>01/04/2026</strong> e <strong>01/09/2026</strong>.
+          Humanista de São Paulo, entre as datas <strong>05/09/2026</strong> e <strong>13/09/2026</strong>.
         </p>
         <div className="flex flex-col mt-10">
           <img src={some} alt="Illustration of social media" className="max-w-1/2 md:w-max h-auto mx-auto" />
