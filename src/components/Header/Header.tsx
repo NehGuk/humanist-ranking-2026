@@ -5,7 +5,7 @@ export default function Header() {
       <a href="#intro">
         <img src={logoSimplesTransparente} alt="Logo Humanistas Brasil" className="h-10 w-10 object-contain" />
       </a>
-      <h1 className="text-xl font-bold text-emerald-800">Ranking Humanista</h1>
+      <h1 className="text-xl text-emerald-800 pr-3 mr-auto md:mx-auto">Ranking Humanista</h1>
     </header>
   )
 }
