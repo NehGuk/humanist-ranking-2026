@@ -6,9 +6,10 @@ export default function Criteria() {
       <div className="mx-auto w-full max-w-xl">
         <h3 className="mt-6 text-gray-50">Critérios</h3>
         <p className="max-w-prose md:text-lg">
-          Selecionamos 12 pautas humanistas contemporâneas. Após verificar manifestações públicas dos candidatos e candidatas, em suas redes
-          sociais e principais veículos de mídia do país, estabelecemos uma escala de pontuação. A nota final considera posições públicas{" "}
-          <strong>a favor</strong> do tema, <strong>contra</strong> ou <strong>sem posicionamento conhecido</strong> a respeito do assunto.
+          Selecionamos 12 pautas humanistas contemporâneas. Após verificar os planos de governo registrados no Tribunal Superior Eleitoral
+          (TSE) no início do período eleitoral, estabelecemos uma escala de pontuação. A concordância com cada valor humanista dá ao
+          candidato 1 ponto; a discordância retira 1 ponto; e a ausência de posicionamento acerca do tema representa pontuação nula. Assim,
+          as "notas" de cada presidenciável variam entre 0 e 12.
         </p>
         <div className="mt-6">
           <h4 className="mb-4 text-lg text-gray-50 md:text-xl">Legenda</h4>
