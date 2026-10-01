@@ -3,8 +3,8 @@ export default function Period() {
   return (
     <section id="periodo" className="flex min-h-screen flex-col scroll-mt-14 bg-gray-600 p-5 text-gray-50 md:justify-center">
       <div className="mx-auto w-full max-w-xl text-center">
-        <h3 className="mt-12 text-2xl font-bold text-gray-50 md:text-3xl">Período de análise</h3>
-        <p className="max-w-prose text-sm md:text-lg">
+        <h3 className="mt-12 text-gray-50">Período de análise</h3>
+        <p className="max-w-prose md:text-lg">
           As informações que embasaram a construção desse <em>ranking</em> foram compiladas pelas equipes da Humanistas Brasil e do Coletivo
           Humanista de São Paulo, entre as datas <strong>01/04/2026</strong> e <strong>01/09/2026</strong>.
         </p>

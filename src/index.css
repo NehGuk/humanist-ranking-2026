@@ -46,7 +46,7 @@
   }
 
   h3 {
-    @apply font-bold text-xl pb-3 font-slab;
+    @apply font-bold pb-3 font-slab text-4xl md:text-5xl;
   }
 
   h4 {
