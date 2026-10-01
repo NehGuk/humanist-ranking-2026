@@ -1,4 +1,4 @@
-export default function Methodology() {
+export default function Period() {
   return (
     <section className="flex min-h-screen flex-col">
       <h3>Período de análise</h3>
