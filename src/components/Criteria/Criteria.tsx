@@ -5,7 +5,7 @@ export default function Criteria() {
     <section id="criteria" className="flex min-h-screen flex-col scroll-mt-14 bg-green-800 p-5 text-gray-50 md:justify-center">
       <div className="mx-auto w-full max-w-xl">
         <h3 className="mt-12 text-2xl font-bold text-gray-50 md:text-3xl">Critérios</h3>
-        <p className="max-w-prose text-sm md:text-base">
+        <p className="max-w-prose text-sm md:text-lg">
           Selecionamos 12 pautas humanistas contemporâneas. Após verificar manifestações públicas dos candidatos e candidatas, em suas redes
           sociais e principais veículos de mídia do país, estabelecemos uma escala de pontuação. A nota final considera posições públicas{" "}
           <strong>a favor</strong> do tema (+1), <strong>contra</strong> (-1) ou <strong>sem posicionamento conhecido</strong> (0) a

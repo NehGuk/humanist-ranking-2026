@@ -9,8 +9,8 @@ interface CandidateDetailsProps {
 export default function CandidateDetails({ politician }: CandidateDetailsProps) {
   return (
     <section className="flex min-h-screen flex-col max-w-md">
-      <div id={`candidate-${politician.id}`} className=" p-3 bg-white">
-        <div className="flex gap-3 mb-6">
+      <div id={`candidate-${politician.id}`} className=" p-2 bg-white">
+        <div className="flex gap-3 mb-3">
           <div className="">
             <img
               src={politician.photo_url ?? undefined}
@@ -25,17 +25,18 @@ export default function CandidateDetails({ politician }: CandidateDetailsProps) 
           </div>
         </div>
         <CandidateStances stances={politician.politician_stances} />
-
-        <table className="w-full max-w-xl text-sm table-fixed border-1 border-gray-400 mt-2">
-          <tbody className="font-bold uppercase">
-            <tr className="">
-              <td className="pl-2 text-gray-500">Nota final</td>
-              <td className="pr-3 text-right text-xl">
-                <span className={colorPoints(politician.points)}>{politician.points}</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="flex flex-col h-10 w-full mt-2 bg-green-300/30">
+          <table className="w-full max-w-xl my-auto text-sm table-fixed">
+            <tbody className="font-bold uppercase">
+              <tr className="">
+                <td className="pl-2 text-gray-600">Nota final</td>
+                <td className="pr-4 text-right text-xl">
+                  <span className={colorPoints(politician.points)}>{politician.points} </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
   )
