@@ -1,7 +1,7 @@
 import some from "../../assets/illustrations/some.gif"
 export default function Period() {
   return (
-    <section id="periodo" className="flex min-h-screen flex-col scroll-mt-14 bg-gray-600 p-5 text-gray-50 md:justify-center">
+    <section id="periodo" className="flex min-h-screen flex-col scroll-mt-14 bg-gray-600 p-5 text-gray-50 justify-center">
       <div className="mx-auto w-full max-w-xl text-center">
         <h3 className="mt-12 text-gray-50">Período de análise</h3>
         <p className="max-w-prose md:text-lg">

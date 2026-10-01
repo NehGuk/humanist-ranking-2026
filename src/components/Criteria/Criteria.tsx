@@ -2,7 +2,7 @@ import { CircleCheck, CircleQuestionMark, CircleX, ChevronsDown } from "lucide-r
 
 export default function Criteria() {
   return (
-    <section id="criteria" className="flex min-h-screen flex-col scroll-mt-14 bg-green-800 p-5 text-gray-50 md:justify-center">
+    <section id="criteria" className="flex min-h-screen flex-col scroll-mt-14 bg-green-800 p-5 text-gray-50 justify-center">
       <div className="mx-auto w-full max-w-xl">
         <h3 className="mt-6 text-gray-50">Critérios</h3>
         <p className="max-w-prose md:text-lg">
@@ -10,7 +10,6 @@ export default function Criteria() {
           sociais e principais veículos de mídia do país, estabelecemos uma escala de pontuação. A nota final considera posições públicas{" "}
           <strong>a favor</strong> do tema, <strong>contra</strong> ou <strong>sem posicionamento conhecido</strong> a respeito do assunto.
         </p>
-
         <div className="mt-6">
           <h4 className="mb-4 text-lg text-gray-50 md:text-xl">Legenda</h4>
           <table className="w-full table-fixed rounded-md bg-green-900 text-center text-gray-200 text-sm font-slab uppercase md:text-base">
@@ -41,8 +40,10 @@ export default function Criteria() {
             </tbody>
           </table>
         </div>
-        <a href="#candidate-details" className="mx-auto block w-fit pt-6 md:pt-20">
-          <ChevronsDown className="mb-8 mt-4 h-12 w-20 text-white animate-bounce" />
+      </div>
+      <div className="mx-auto pt-6 md:pt-26">
+        <a href="#candidate-details" className="block w-fit">
+          <ChevronsDown className="h-12 w-20 text-white animate-bounce" />
         </a>
       </div>
     </section>
