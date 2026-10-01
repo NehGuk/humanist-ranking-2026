@@ -1,6 +1,7 @@
 import CandidateStances from "../CandidateStances/CandidateStances"
 import type { Politician } from "../../types"
 import colorPoints from "../../utils/colorPoints"
+import colorFinalScoreArea from "../../utils/colorFinalScoreArea"
 
 interface CandidateDetailsProps {
   politician: Politician
@@ -24,10 +25,10 @@ export default function CandidateDetails({ politician }: CandidateDetailsProps) 
 
       <CandidateStances stances={politician.politician_stances} />
 
-      <table className="mt-2 w-full max-w-xl table-fixed text-sm bg-green-800/10">
+      <table className={colorFinalScoreArea(politician.points)}>
         <tbody className="font-bold uppercase">
           <tr>
-            <td className="pl-2 text-green-800">Nota final</td>
+            <td className="pl-2 text-grey-600">Nota final</td>
             <td className="pr-4 text-right text-xl">
               <span className={colorPoints(politician.points)}>{politician.points}</span>
             </td>
