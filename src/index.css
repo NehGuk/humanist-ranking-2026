@@ -8,6 +8,19 @@
   --font-handwriting: "Playwrite AT Variable", cursive;
   --font-slab: "Zilla Slab", serif;
   --font-sans: "Atkinson Hyperlegible", sans-serif;
+  --animate-bounce: gentle-bounce 2.5s ease-in-out infinite;
+
+  @keyframes gentle-bounce {
+    0%,
+    20%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+  }
 }
 
 @layer base {

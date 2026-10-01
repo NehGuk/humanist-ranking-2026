@@ -36,7 +36,7 @@ export default function Criteria() {
           </table>
         </div>
         <a href="#candidate-details" className="mx-auto block w-fit pt-14 md:pt-20">
-          <ChevronsDown className="mb-8 mt-4 h-12 w-20 text-white" />
+          <ChevronsDown className="mb-8 mt-4 h-12 w-20 text-white animate-bounce" />
         </a>
       </div>
     </section>
