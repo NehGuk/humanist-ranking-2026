@@ -8,36 +8,32 @@ interface CandidateDetailsProps {
 
 export default function CandidateDetails({ politician }: CandidateDetailsProps) {
   return (
-    <section className="flex min-h-screen flex-col max-w-md">
-      <div id={`candidate-${politician.id}`} className=" p-2 bg-white">
-        <div className="flex gap-3 mb-3">
-          <div className="">
-            <img
-              src={politician.photo_url ?? undefined}
-              alt={politician.name}
-              className="h-22 w-22 rounded-full border-1 shrink-0 border-gray-200 object-cover grayscale"
-            />
-          </div>
-          <div className="my-auto">
-            <h4>{politician.name}</h4>
-            <p className="uppercase text-sm text-gray-500 font-medium">{politician.parties?.name}</p>
-            <p className="uppercase text-sm text-gray-500 font-medium">Número: {politician.candidate_number}</p>
-          </div>
-        </div>
-        <CandidateStances stances={politician.politician_stances} />
-        <div className="flex flex-col h-10 w-full mt-2 bg-green-300/30">
-          <table className="w-full max-w-xl my-auto text-sm table-fixed">
-            <tbody className="font-bold uppercase">
-              <tr className="">
-                <td className="pl-2 text-gray-600">Nota final</td>
-                <td className="pr-4 text-right text-xl">
-                  <span className={colorPoints(politician.points)}>{politician.points} </span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <div id={`candidate-${politician.id}`} className="flex flex-col border border-gray-100 bg-white p-4 shadow-sm max-w-xl mx-auto">
+      <div className="mb-3 flex gap-3">
+        <img
+          src={politician.photo_url ?? undefined}
+          alt={politician.name}
+          className="h-20 w-20 shrink-0 rounded-full border border-gray-200 object-cover grayscale"
+        />
+        <div className="my-auto">
+          <h4 className="font-bold text-gray-900">{politician.name}</h4>
+          <p className="text-sm font-medium uppercase text-gray-500">{politician.parties?.name}</p>
+          <p className="text-sm font-medium uppercase text-gray-500">Número: {politician.candidate_number}</p>
         </div>
       </div>
-    </section>
+
+      <CandidateStances stances={politician.politician_stances} />
+
+      <table className="mt-2 w-full max-w-xl table-fixed text-sm bg-green-800/10">
+        <tbody className="font-bold uppercase">
+          <tr>
+            <td className="pl-2 text-green-800">Nota final</td>
+            <td className="pr-4 text-right text-xl">
+              <span className={colorPoints(politician.points)}>{politician.points}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   )
 }
