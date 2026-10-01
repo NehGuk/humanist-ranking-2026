@@ -1,4 +1,6 @@
 import logo from "../../assets/logos/logo.png"
+import { ChevronsUp } from "lucide-react"
+
 export default function Footer() {
   return (
     <section className="p-10  md:max-w-1/3 mx-auto">
@@ -27,13 +29,16 @@ export default function Footer() {
 
       <div className="text-sm p-5 text-gray-500">
         <p>
-          O <em>Ranking Humanista</em> é uma parceria entre a Humanistas Brasil e o Coletivo Humanista de São Paulo.
-        </p>
-        <div className="pt-5">
+          O <em>Ranking Humanista</em> é uma parceria entre a Humanistas Brasil e o Coletivo Humanista de São Paulo.{" "}
           <a href="https://storyset.com/people" target="_blank">
-            Crédito das ilustrações: Storyset
+            Crédito das ilustrações: Storyset.
           </a>
-        </div>
+        </p>
+      </div>
+      <div>
+        <a href="#">
+          <ChevronsUp className="h-12 w-20 text-brand animate-bounce mx-auto" />
+        </a>
       </div>
     </section>
   )

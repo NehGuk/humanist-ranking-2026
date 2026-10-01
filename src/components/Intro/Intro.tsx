@@ -11,7 +11,7 @@ export default function Intro() {
         Como os candidatos pontuam em quesitos relacionados a pautas <strong className="text-yellow-600">humanistas</strong>?
       </p>
       <a href="#ranking">
-        <ChevronsDown className="mb-8 mt-4 h-12 w-20 text-green-700 animate-bounce" />
+        <ChevronsDown className="mb-8 mt-4 h-12 w-20 text-brand animate-bounce" />
       </a>
     </section>
   )
