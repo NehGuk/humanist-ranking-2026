@@ -58,7 +58,10 @@ export default function Ranking() {
         </div>
       </section>
       <Criteria />
-      <section id="candidate-details" className="grid grid-cols-1 gap-4 max-w-7xl mx-auto p-3 scroll-mt-14 md:grid-cols-2 lg:grid-cols-3">
+      <section
+        id="candidate-details"
+        className="grid grid-cols-1 gap-4 max-w-7xl mx-auto p-3 scroll-mt-14 md:grid-cols-2 lg:grid-cols-3 lg:pt-14 mb-12"
+      >
         {politicians.map((p) => (
           <CandidateDetails key={p.id} politician={p} />
         ))}
