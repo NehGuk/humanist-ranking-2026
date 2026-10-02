@@ -1,0 +1,3 @@
+# public/robots.text
+User-agent: *
+Allow: /
